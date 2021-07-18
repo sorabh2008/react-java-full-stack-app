@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class UserServiceImpl implements IService{
 	@Autowired(required = true)
 	UserManager usrMgr;
 	private UserResponse response;
-	
+	@CrossOrigin(origins="http://localhost:3000")
 	@GetMapping(value="/")
 	public UserResponse getUsers() {
 		Date startTime = new Date();

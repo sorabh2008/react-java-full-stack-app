@@ -13,7 +13,7 @@ services:
       - ./db-data:/var/lib/postgresql/data
 
   backend:
-    image: "turkogluc/backend"
+    image: "app/backend"
     container_name: "backend"
     ports:
       - "8080:8080"
@@ -21,7 +21,7 @@ services:
       - db
 
   frontend:
-    image: "turkogluc/frontend"
+    image: "app/frontend"
     container_name: "frontend"
     ports:
       - "80:80"
